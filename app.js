@@ -1,5 +1,9 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
-var config = require('./config');
+if(!process.env.CONSUMER_KEY) {
+    var config = require('./localconfig');
+}else{
+    var config = require('./config');
+}
 var TaskList = require('./routes/tasklist');
 var TaskDao = require('./models/taskDao');
 var express = require('express');
