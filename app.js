@@ -1,5 +1,5 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
-if(process.env.CONSUMER_KEY) {
+if(process.env.AUTH_KEY) {
     var config = require('./config');
 }else{
     var config = require('./localconfig');
